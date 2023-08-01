@@ -11,22 +11,22 @@ export class CommonPageMethods{
     }
 
     static clickOnContactOption(){
-        CommonPageElements.topMenu.home.click()
+        CommonPageElements.topMenu.contact.click()
     }
 
     static clickOnAboutUsOption(){
-        CommonPageElements.topMenu.home.click()
+        CommonPageElements.topMenu.aboutUs.click()
     }
 
     static clickOnCartOption(){
-        CommonPageElements.topMenu.home.click()
+        CommonPageElements.topMenu.cart.click()
     }
 
     static clickOnLoginOption(){
-        CommonPageElements.topMenu.home.click()
+        CommonPageElements.topMenu.login.click()
     }
 
     static clickOnSignUpOption(){
-        CommonPageElements.topMenu.home.click()
+        CommonPageElements.topMenu.signup.click()
     }
 }

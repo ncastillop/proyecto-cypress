@@ -2,7 +2,7 @@ export class CommonPageElements{
     static get topMenu(){
         return{
             get home(){
-                return cy.contains('a', 'Home')
+                return cy.get('li.active a')
             },
             get contact(){
                 return cy.contains('a', 'Contact')
@@ -14,7 +14,7 @@ export class CommonPageElements{
                 return cy.contains('a', 'Cart')
             },
             get login(){
-                return cy.contains('a', 'Log in')
+                return cy.get('a[data-target="#logInModal"]')
             },
             get signup(){
                 return cy.contains('a', 'Sign up')
