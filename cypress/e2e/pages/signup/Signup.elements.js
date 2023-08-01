@@ -14,10 +14,10 @@ export class SignupElements{
     static get buttons(){
         return{
             get close(){
-                cy.contains('button', 'Close').eq(1)
+                return cy.contains('button', 'Close').eq(1)
             },
             get signup(){
-                cy.contains('button', 'Sign up')
+                return cy.contains('button', 'Sign up')
             }
         }
     }
