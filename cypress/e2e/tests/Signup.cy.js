@@ -1,12 +1,13 @@
 import { CommonPageData } from "../pages/common-page/CommonPage.data"
 import { CommonPageMethods } from "../pages/common-page/CommonPage.methods"
+import { LoginData } from "../pages/login/Login.data"
 import { SignupMethods } from "../pages/signup/Signup.methods"
 import { Logger } from "../util/Logger"
 
 const user = CommonPageMethods.generateRandomString()
 const pass = CommonPageMethods.generateRandomString(7)
 
-describe(CommonPageData.testSuites.registroYAutenticacion, ()=>{
+describe(CommonPageData.testSuites.registro, ()=>{
     it('Registro de usuario valido',()=>{
 
         Logger.stepNumber(1)
@@ -42,8 +43,8 @@ describe(CommonPageData.testSuites.registroYAutenticacion, ()=>{
         //cy.wait(30000)
         Logger.stepNumber(3)
         Logger.stepLog('Completar todos los campos obligatorios con informacion invalida')
-        SignupMethods.insertUsername('random01')
-        SignupMethods.insertPassword('random01')
+        SignupMethods.insertUsername(LoginData.validCredencials.username)
+        SignupMethods.insertPassword(LoginData.validCredencials.username)
 
         Logger.stepNumber(4)
         Logger.stepLog('Hacer clic en "Sign up" para registrar el usuario')

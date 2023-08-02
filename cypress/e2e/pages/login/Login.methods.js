@@ -1,4 +1,5 @@
 import { Logger } from "../../util/Logger";
+import { CommonPageMethods } from "../common-page/CommonPage.methods";
 import { LoginElements } from "./Login.elements";
 
 export class LoginMethods{
@@ -22,6 +23,14 @@ export class LoginMethods{
         this.insertPassword(password)
         Logger.subStep('Click on Login button')
         this.clickOnLoginButton()
+    }
+
+    static validateLoginSuccessful(user){
+        cy.get('a#nameofuser').should('contain.text', user)
+    }
+
+    static validateLoginInvalid(){
+        CommonPageMethods.verifyAlert('User does not exist.')
     }
 
 }
