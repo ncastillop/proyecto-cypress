@@ -5,6 +5,7 @@ import { HomeElements } from "../pages/home/Home.elements";
 import { HomeMethods } from "../pages/home/Home.methods";
 import { LoginData } from "../pages/login/Login.data";
 import { LoginMethods } from "../pages/login/Login.methods";
+import { PlacceOrderData } from "../pages/placeOrder/PlacceOrder.data";
 import { PlaceOrderMethods } from "../pages/placeOrder/PlaceOrder.methods";
 import { ProductsDetailsMethods } from "../pages/productDetails/ProductDetails.methods";
 import { ThankYouForYourPurchaseMethods } from "../pages/thankYouForYourPurchase/ThankYouForYourPurchase.methods";
@@ -117,12 +118,7 @@ describe(CommonPageData.testSuites.catalogoYCompra, ()=>{
         
         Logger.stepNumber(9)
         Logger.stepLog('Completar los campos obligatorios en la página de información de envío.')
-        PlaceOrderMethods.insertName('Nicolas')
-        PlaceOrderMethods.insertCountry('Chile')
-        PlaceOrderMethods.insertCity('Stgo')
-        PlaceOrderMethods.insertCreditCard('5445646546565645')
-        PlaceOrderMethods.insertMonth('12')
-        PlaceOrderMethods.insertYear('2026')
+        PlaceOrderMethods.insertOrderInformation(PlacceOrderData.testData)
 
         Logger.stepNumber(10)
         Logger.stepLog('Hacer clic en el botón "Purchase".')
